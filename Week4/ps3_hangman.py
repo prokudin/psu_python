@@ -51,7 +51,14 @@ def isWordGuessed(secretWord, lettersGuessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-
+    result = False
+    for letter in secretWord:
+        if letter in lettersGuessed:
+            result = True
+        else: 
+            result = False
+            break
+    return result  
 
 
 def getGuessedWord(secretWord, lettersGuessed):
@@ -62,7 +69,14 @@ def getGuessedWord(secretWord, lettersGuessed):
       what letters in secretWord have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE...
+    guessedWord=''
+    for letter in secretWord:
+        if letter not in lettersGuessed:
+            guessedWord += "_ "
+        else:
+            guessedWord += letter
 
+    return guessedWord
 
 
 def getAvailableLetters(lettersGuessed):
@@ -72,6 +86,16 @@ def getAvailableLetters(lettersGuessed):
       yet been guessed.
     '''
     # FILL IN YOUR CODE HERE...
+    import string
+    alphabet = string.ascii_lowercase
+    availableLetter=''
+    
+    for letter in alphabet:
+        if letter not in lettersGuessed:
+            availableLetter += letter
+    
+    return availableLetter
+
     
 
 def hangman(secretWord):
