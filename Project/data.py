@@ -4,7 +4,7 @@
 Created on Thu Apr  4 12:53:24 2019
 
 @author: avp5627
-"""
+p"""
 
 import pandas as pd
 
@@ -15,4 +15,4 @@ class DATA:
 
 
 if __name__ == '__main__':
-    hermes = DATA({"1000.xlsx","1001.xlsx"})
+    hermes = DATA({"1000.xlsx"})
